@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,17 +24,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.models.attribute import Attribute  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.models.attribute import Attribute
 
 
 class TestAttribute(unittest.TestCase):
-    """ Attribute unit test stubs """
+    """Attribute unit test stubs"""
 
     def setUp(self):
         pass
@@ -43,10 +41,10 @@ class TestAttribute(unittest.TestCase):
         pass
 
     def testAttribute(self):
-        """
-        Test Attribute
-        """
-        model = swagger_client.models.attribute.Attribute()
+        """Test Attribute"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = swagger_client.models.attribute.Attribute()  # noqa: E501
+        pass
 
 
 if __name__ == '__main__':

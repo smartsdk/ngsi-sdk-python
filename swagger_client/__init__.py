@@ -1,9 +1,11 @@
 # coding: utf-8
 
+# flake8: noqa
+
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,30 +26,26 @@
 
 from __future__ import absolute_import
 
-# import models into sdk package
-from .models.api_entry_point import APIEntryPoint
-from .models.attribute import Attribute
-from .models.attribute_value import AttributeValue
-from .models.batch_operation import BatchOperation
-from .models.entity import Entity
-from .models.entity_type import EntityType
-from .models.error_response import ErrorResponse
-from .models.query import Query
-from .models.query_pattern import QueryPattern
-from .models.subscription import Subscription
-
 # import apis into sdk package
-from .apis.api_entry_point_api import APIEntryPointApi
-from .apis.attribute_value_api import AttributeValueApi
-from .apis.attributes_api import AttributesApi
-from .apis.batch_operations_api import BatchOperationsApi
-from .apis.entities_api import EntitiesApi
-from .apis.subscriptions_api import SubscriptionsApi
-from .apis.types_api import TypesApi
+from swagger_client.api.api_entry_point_api import APIEntryPointApi
+from swagger_client.api.attribute_value_api import AttributeValueApi
+from swagger_client.api.attributes_api import AttributesApi
+from swagger_client.api.batch_operations_api import BatchOperationsApi
+from swagger_client.api.entities_api import EntitiesApi
+from swagger_client.api.subscriptions_api import SubscriptionsApi
+from swagger_client.api.types_api import TypesApi
 
 # import ApiClient
-from .api_client import ApiClient
-
-from .configuration import Configuration
-
-configuration = Configuration()
+from swagger_client.api_client import ApiClient
+from swagger_client.configuration import Configuration
+# import models into sdk package
+from swagger_client.models.api_entry_point import APIEntryPoint
+from swagger_client.models.attribute import Attribute
+from swagger_client.models.attribute_value import AttributeValue
+from swagger_client.models.batch_operation import BatchOperation
+from swagger_client.models.entity import Entity
+from swagger_client.models.entity_type import EntityType
+from swagger_client.models.error_response import ErrorResponse
+from swagger_client.models.query import Query
+from swagger_client.models.query_pattern import QueryPattern
+from swagger_client.models.subscription import Subscription

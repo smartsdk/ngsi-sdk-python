@@ -1,6 +1,6 @@
 # swagger_client.SubscriptionsApi
 
-All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
+All URIs are relative to *https://https://api.s.orchestracities.com/context/v2//v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,24 +18,25 @@ Method | HTTP request | Description
 
 Creates a new subscription. The subscription is represented by a JSON object as described at the beginning of this section. Response: * Successful operation uses 201 Created * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: fiware_token
-swagger_client.configuration.api_key['X-Auth-Token'] = 'YOUR_API_KEY'
+# Configure API key authorization: Bearer
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-Auth-Token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi()
+api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
 body = swagger_client.Subscription() # Subscription | 
 
-try: 
+try:
     api_instance.create_a_new_subscription(body)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->create_a_new_subscription: %s\n" % e)
@@ -53,7 +54,7 @@ void (empty response body)
 
 ### Authorization
 
-[fiware_token](../README.md#fiware_token)
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -69,24 +70,25 @@ void (empty response body)
 
 Cancels subscription. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: fiware_token
-swagger_client.configuration.api_key['X-Auth-Token'] = 'YOUR_API_KEY'
+# Configure API key authorization: Bearer
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-Auth-Token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi()
+api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
 subscription_id = 'subscription_id_example' # str | subscription Id.
 
-try: 
+try:
     api_instance.delete_subscription(subscription_id)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->delete_subscription: %s\n" % e)
@@ -104,7 +106,7 @@ void (empty response body)
 
 ### Authorization
 
-[fiware_token](../README.md#fiware_token)
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -120,24 +122,25 @@ void (empty response body)
 
 The response is the subscription represented by a JSON object as described at the beginning of this section. Response: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: fiware_token
-swagger_client.configuration.api_key['X-Auth-Token'] = 'YOUR_API_KEY'
+# Configure API key authorization: Bearer
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-Auth-Token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi()
+api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
 subscription_id = 'subscription_id_example' # str | subscription Id.
 
-try: 
+try:
     api_response = api_instance.retrieve_subscription(subscription_id)
     pprint(api_response)
 except ApiException as e:
@@ -156,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[fiware_token](../README.md#fiware_token)
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -172,26 +175,27 @@ Name | Type | Description  | Notes
 
 Returns a list of all the subscriptions present in the system. Response: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: fiware_token
-swagger_client.configuration.api_key['X-Auth-Token'] = 'YOUR_API_KEY'
+# Configure API key authorization: Bearer
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-Auth-Token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi()
+api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
 limit = 1.2 # float | Limit the number of types to be retrieved (optional)
 offset = 1.2 # float | Skip a number of records (optional)
 options = 'options_example' # str | Options dictionary (optional)
 
-try: 
+try:
     api_response = api_instance.retrieve_subscriptions(limit=limit, offset=offset, options=options)
     pprint(api_response)
 except ApiException as e:
@@ -212,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[fiware_token](../README.md#fiware_token)
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 
@@ -228,25 +232,26 @@ Name | Type | Description  | Notes
 
 Only the fields included in the request are updated in the subscription. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: fiware_token
-swagger_client.configuration.api_key['X-Auth-Token'] = 'YOUR_API_KEY'
+# Configure API key authorization: Bearer
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-Auth-Token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SubscriptionsApi()
+api_instance = swagger_client.SubscriptionsApi(swagger_client.ApiClient(configuration))
 subscription_id = 'subscription_id_example' # str | subscription Id.
 body = swagger_client.Subscription() # Subscription | 
 
-try: 
+try:
     api_instance.update_subscription(subscription_id, body)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->update_subscription: %s\n" % e)
@@ -265,7 +270,7 @@ void (empty response body)
 
 ### Authorization
 
-[fiware_token](../README.md#fiware_token)
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

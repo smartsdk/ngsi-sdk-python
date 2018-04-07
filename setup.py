@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -22,12 +22,10 @@
     limitations under the License.
 """
 
-import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "swagger_client"
+NAME = "swagger-client"
 VERSION = "1.0.0"
-
 # To install the library, run the following
 #
 # python setup.py install
@@ -48,7 +46,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
     """
 )
-

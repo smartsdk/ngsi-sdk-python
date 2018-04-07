@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,37 +24,31 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.api.types_api import TypesApi  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.apis.types_api import TypesApi
 
 
 class TestTypesApi(unittest.TestCase):
-    """ TypesApi unit test stubs """
+    """TypesApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.apis.types_api.TypesApi()
+        self.api = swagger_client.api.types_api.TypesApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_retrieve_entity_type(self):
-        """
-        Test case for retrieve_entity_type
+        """Test case for retrieve_entity_type
 
-        
         """
         pass
 
     def test_retrieve_entity_types(self):
-        """
-        Test case for retrieve_entity_types
+        """Test case for retrieve_entity_types
 
-        
         """
         pass
 

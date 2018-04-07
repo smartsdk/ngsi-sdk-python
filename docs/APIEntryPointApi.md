@@ -1,6 +1,6 @@
 # swagger_client.APIEntryPointApi
 
-All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
+All URIs are relative to *https://https://api.s.orchestracities.com/context/v2//v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,23 +14,24 @@ Method | HTTP request | Description
 
 This resource does not have any attributes. Instead it offers the initial API affordances in the form of the links in the JSON body. It is recommended to follow the “url” link values, [Link](https://tools.ietf.org/html/rfc5988) or Location headers where applicable to retrieve resources. Instead of constructing your own URLs, to keep your client decoupled from implementation details.
 
-### Example 
+### Example
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: fiware_token
-swagger_client.configuration.api_key['X-Auth-Token'] = 'YOUR_API_KEY'
+# Configure API key authorization: Bearer
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['X-Auth-Token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.APIEntryPointApi()
+api_instance = swagger_client.APIEntryPointApi(swagger_client.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.retrieve_api_resources()
     pprint(api_response)
 except ApiException as e:
@@ -46,7 +47,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[fiware_token](../README.md#fiware_token)
+[Bearer](../README.md#Bearer)
 
 ### HTTP request headers
 

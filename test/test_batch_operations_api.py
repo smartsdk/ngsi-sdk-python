@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,37 +24,31 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.api.batch_operations_api import BatchOperationsApi  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.apis.batch_operations_api import BatchOperationsApi
 
 
 class TestBatchOperationsApi(unittest.TestCase):
-    """ BatchOperationsApi unit test stubs """
+    """BatchOperationsApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.apis.batch_operations_api.BatchOperationsApi()
+        self.api = swagger_client.api.batch_operations_api.BatchOperationsApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_query(self):
-        """
-        Test case for query
+        """Test case for query
 
-        
         """
         pass
 
     def test_update(self):
-        """
-        Test case for update
+        """Test case for update
 
-        
         """
         pass
 

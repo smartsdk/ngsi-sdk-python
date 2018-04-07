@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,61 +24,49 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.api.subscriptions_api import SubscriptionsApi  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.apis.subscriptions_api import SubscriptionsApi
 
 
 class TestSubscriptionsApi(unittest.TestCase):
-    """ SubscriptionsApi unit test stubs """
+    """SubscriptionsApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.apis.subscriptions_api.SubscriptionsApi()
+        self.api = swagger_client.api.subscriptions_api.SubscriptionsApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_create_a_new_subscription(self):
-        """
-        Test case for create_a_new_subscription
+        """Test case for create_a_new_subscription
 
-        
         """
         pass
 
     def test_delete_subscription(self):
-        """
-        Test case for delete_subscription
+        """Test case for delete_subscription
 
-        
         """
         pass
 
     def test_retrieve_subscription(self):
-        """
-        Test case for retrieve_subscription
+        """Test case for retrieve_subscription
 
-        
         """
         pass
 
     def test_retrieve_subscriptions(self):
-        """
-        Test case for retrieve_subscriptions
+        """Test case for retrieve_subscriptions
 
-        
         """
         pass
 
     def test_update_subscription(self):
-        """
-        Test case for update_subscription
+        """Test case for update_subscription
 
-        
         """
         pass
 

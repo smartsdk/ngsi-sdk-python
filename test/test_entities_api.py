@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,85 +24,67 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.api.entities_api import EntitiesApi  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.apis.entities_api import EntitiesApi
 
 
 class TestEntitiesApi(unittest.TestCase):
-    """ EntitiesApi unit test stubs """
+    """EntitiesApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.apis.entities_api.EntitiesApi()
+        self.api = swagger_client.api.entities_api.EntitiesApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_create_entity(self):
-        """
-        Test case for create_entity
+        """Test case for create_entity
 
-        
         """
         pass
 
     def test_list_entities(self):
-        """
-        Test case for list_entities
+        """Test case for list_entities
 
-        
         """
         pass
 
     def test_remove_entity(self):
-        """
-        Test case for remove_entity
+        """Test case for remove_entity
 
-        
         """
         pass
 
     def test_replace_all_entity_attributes(self):
-        """
-        Test case for replace_all_entity_attributes
+        """Test case for replace_all_entity_attributes
 
-        
         """
         pass
 
     def test_retrieve_entity(self):
-        """
-        Test case for retrieve_entity
+        """Test case for retrieve_entity
 
-        
         """
         pass
 
     def test_retrieve_entity_attributes(self):
-        """
-        Test case for retrieve_entity_attributes
+        """Test case for retrieve_entity_attributes
 
-        
         """
         pass
 
     def test_update_existing_entity_attributes(self):
-        """
-        Test case for update_existing_entity_attributes
+        """Test case for update_existing_entity_attributes
 
-        
         """
         pass
 
     def test_update_or_append_entity_attributes(self):
-        """
-        Test case for update_or_append_entity_attributes
+        """Test case for update_or_append_entity_attributes
 
-        
         """
         pass
 

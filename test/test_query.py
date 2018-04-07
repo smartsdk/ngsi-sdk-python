@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,17 +24,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.models.query import Query  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.models.query import Query
 
 
 class TestQuery(unittest.TestCase):
-    """ Query unit test stubs """
+    """Query unit test stubs"""
 
     def setUp(self):
         pass
@@ -43,10 +41,10 @@ class TestQuery(unittest.TestCase):
         pass
 
     def testQuery(self):
-        """
-        Test Query
-        """
-        model = swagger_client.models.query.Query()
+        """Test Query"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = swagger_client.models.query.Query()  # noqa: E501
+        pass
 
 
 if __name__ == '__main__':

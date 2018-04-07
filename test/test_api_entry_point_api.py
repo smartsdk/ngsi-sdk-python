@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,29 +24,25 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.api.api_entry_point_api import APIEntryPointApi  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.apis.api_entry_point_api import APIEntryPointApi
 
 
 class TestAPIEntryPointApi(unittest.TestCase):
-    """ APIEntryPointApi unit test stubs """
+    """APIEntryPointApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.apis.api_entry_point_api.APIEntryPointApi()
+        self.api = swagger_client.api.api_entry_point_api.APIEntryPointApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_retrieve_api_resources(self):
-        """
-        Test case for retrieve_api_resources
+        """Test case for retrieve_api_resources
 
-        
         """
         pass
 

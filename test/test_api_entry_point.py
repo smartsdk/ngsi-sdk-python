@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,17 +24,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.models.api_entry_point import APIEntryPoint  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.models.api_entry_point import APIEntryPoint
 
 
 class TestAPIEntryPoint(unittest.TestCase):
-    """ APIEntryPoint unit test stubs """
+    """APIEntryPoint unit test stubs"""
 
     def setUp(self):
         pass
@@ -43,10 +41,10 @@ class TestAPIEntryPoint(unittest.TestCase):
         pass
 
     def testAPIEntryPoint(self):
-        """
-        Test APIEntryPoint
-        """
-        model = swagger_client.models.api_entry_point.APIEntryPoint()
+        """Test APIEntryPoint"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = swagger_client.models.api_entry_point.APIEntryPoint()  # noqa: E501
+        pass
 
 
 if __name__ == '__main__':

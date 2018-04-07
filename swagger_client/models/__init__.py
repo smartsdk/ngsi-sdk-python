@@ -1,9 +1,10 @@
 # coding: utf-8
 
+# flake8: noqa
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -25,13 +26,13 @@
 from __future__ import absolute_import
 
 # import models into model package
-from .api_entry_point import APIEntryPoint
-from .attribute import Attribute
-from .attribute_value import AttributeValue
-from .batch_operation import BatchOperation
-from .entity import Entity
-from .entity_type import EntityType
-from .error_response import ErrorResponse
-from .query import Query
-from .query_pattern import QueryPattern
-from .subscription import Subscription
+from swagger_client.models.api_entry_point import APIEntryPoint
+from swagger_client.models.attribute import Attribute
+from swagger_client.models.attribute_value import AttributeValue
+from swagger_client.models.batch_operation import BatchOperation
+from swagger_client.models.entity import Entity
+from swagger_client.models.entity_type import EntityType
+from swagger_client.models.error_response import ErrorResponse
+from swagger_client.models.query import Query
+from swagger_client.models.query_pattern import QueryPattern
+from swagger_client.models.subscription import Subscription

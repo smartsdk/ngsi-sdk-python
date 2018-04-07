@@ -3,7 +3,7 @@
 """
     ngsi-v2
 
-    NGSI V2 API
+    NGSI V2 API  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -24,37 +24,31 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import swagger_client
+from swagger_client.api.attribute_value_api import AttributeValueApi  # noqa: E501
 from swagger_client.rest import ApiException
-from swagger_client.apis.attribute_value_api import AttributeValueApi
 
 
 class TestAttributeValueApi(unittest.TestCase):
-    """ AttributeValueApi unit test stubs """
+    """AttributeValueApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.apis.attribute_value_api.AttributeValueApi()
+        self.api = swagger_client.api.attribute_value_api.AttributeValueApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_get_attribute_value(self):
-        """
-        Test case for get_attribute_value
+        """Test case for get_attribute_value
 
-        
         """
         pass
 
     def test_update_attribute_value(self):
-        """
-        Test case for update_attribute_value
+        """Test case for update_attribute_value
 
-        
         """
         pass
 
