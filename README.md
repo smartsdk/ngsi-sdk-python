@@ -68,7 +68,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://https://api.s.orchestracities.com/v2*
+All URIs are relative to *https://api.s.orchestracities.com/context/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
