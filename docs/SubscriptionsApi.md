@@ -1,6 +1,6 @@
 # swagger_client.SubscriptionsApi
 
-All URIs are relative to *https://https://api.s.orchestracities.com/context/v2//v2*
+All URIs are relative to *https://https://api.s.orchestracities.com/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
