@@ -1,6 +1,6 @@
 # swagger_client.AttributesApi
 
-All URIs are relative to *https://api.s.orchestracities.com/context/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

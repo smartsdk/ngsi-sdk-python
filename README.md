@@ -68,7 +68,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.s.orchestracities.com/context/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -99,7 +99,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [APIEntryPoint](docs/APIEntryPoint.md)
  - [Attribute](docs/Attribute.md)
  - [AttributeValue](docs/AttributeValue.md)
  - [BatchOperation](docs/BatchOperation.md)

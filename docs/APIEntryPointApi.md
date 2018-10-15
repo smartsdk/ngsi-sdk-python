@@ -1,6 +1,6 @@
 # swagger_client.APIEntryPointApi
 
-All URIs are relative to *https://api.s.orchestracities.com/context/v2*
+All URIs are relative to *http://orion.lab.fiware.org:1026*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieve_api_resources**
-> APIEntryPoint retrieve_api_resources()
+> ERRORUNKNOWN retrieve_api_resources()
 
 
 
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**APIEntryPoint**](APIEntryPoint.md)
+[**ERRORUNKNOWN**](ERRORUNKNOWN.md)
 
 ### Authorization
 
