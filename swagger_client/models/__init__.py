@@ -2,9 +2,9 @@
 
 # flake8: noqa
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -18,9 +18,22 @@ from __future__ import absolute_import
 from swagger_client.models.attribute import Attribute
 from swagger_client.models.attribute_value import AttributeValue
 from swagger_client.models.batch_operation import BatchOperation
+from swagger_client.models.data_provided import DataProvided
+from swagger_client.models.data_provided_expression import DataProvidedExpression
 from swagger_client.models.entity import Entity
 from swagger_client.models.entity_type import EntityType
 from swagger_client.models.error_response import ErrorResponse
+from swagger_client.models.opquery_expression import OpqueryExpression
+from swagger_client.models.provider import Provider
 from swagger_client.models.query import Query
 from swagger_client.models.query_pattern import QueryPattern
+from swagger_client.models.registration import Registration
+from swagger_client.models.registration_response import RegistrationResponse
+from swagger_client.models.registration_response_forwarding_information import RegistrationResponseForwardingInformation
 from swagger_client.models.subscription import Subscription
+from swagger_client.models.subscription_notification import SubscriptionNotification
+from swagger_client.models.subscription_notification_http import SubscriptionNotificationHttp
+from swagger_client.models.subscription_notification_http_custom import SubscriptionNotificationHttpCustom
+from swagger_client.models.subscription_subject import SubscriptionSubject
+from swagger_client.models.subscription_subject_conditions import SubscriptionSubjectConditions
+from swagger_client.models.update_subscription_response import UpdateSubscriptionResponse

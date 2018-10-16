@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -16,6 +16,7 @@ import re  # noqa: F401
 
 import six
 
+from swagger_client.models.opquery_expression import OpqueryExpression  # noqa: F401,E501
 from swagger_client.models.query_pattern import QueryPattern  # noqa: F401,E501
 
 
@@ -34,25 +35,35 @@ class Query(object):
     """
     swagger_types = {
         'entities': 'list[QueryPattern]',
-        'attributes': 'list[str]'
+        'attrs': 'list[str]',
+        'expression': 'OpqueryExpression',
+        'metadata': 'list[str]'
     }
 
     attribute_map = {
         'entities': 'entities',
-        'attributes': 'attributes'
+        'attrs': 'attrs',
+        'expression': 'expression',
+        'metadata': 'metadata'
     }
 
-    def __init__(self, entities=None, attributes=None):  # noqa: E501
+    def __init__(self, entities=None, attrs=None, expression=None, metadata=None):  # noqa: E501
         """Query - a model defined in Swagger"""  # noqa: E501
 
         self._entities = None
-        self._attributes = None
+        self._attrs = None
+        self._expression = None
+        self._metadata = None
         self.discriminator = None
 
         if entities is not None:
             self.entities = entities
-        if attributes is not None:
-            self.attributes = attributes
+        if attrs is not None:
+            self.attrs = attrs
+        if expression is not None:
+            self.expression = expression
+        if metadata is not None:
+            self.metadata = metadata
 
     @property
     def entities(self):
@@ -76,25 +87,67 @@ class Query(object):
         self._entities = entities
 
     @property
-    def attributes(self):
-        """Gets the attributes of this Query.  # noqa: E501
+    def attrs(self):
+        """Gets the attrs of this Query.  # noqa: E501
 
 
-        :return: The attributes of this Query.  # noqa: E501
+        :return: The attrs of this Query.  # noqa: E501
         :rtype: list[str]
         """
-        return self._attributes
+        return self._attrs
 
-    @attributes.setter
-    def attributes(self, attributes):
-        """Sets the attributes of this Query.
+    @attrs.setter
+    def attrs(self, attrs):
+        """Sets the attrs of this Query.
 
 
-        :param attributes: The attributes of this Query.  # noqa: E501
+        :param attrs: The attrs of this Query.  # noqa: E501
         :type: list[str]
         """
 
-        self._attributes = attributes
+        self._attrs = attrs
+
+    @property
+    def expression(self):
+        """Gets the expression of this Query.  # noqa: E501
+
+
+        :return: The expression of this Query.  # noqa: E501
+        :rtype: OpqueryExpression
+        """
+        return self._expression
+
+    @expression.setter
+    def expression(self, expression):
+        """Sets the expression of this Query.
+
+
+        :param expression: The expression of this Query.  # noqa: E501
+        :type: OpqueryExpression
+        """
+
+        self._expression = expression
+
+    @property
+    def metadata(self):
+        """Gets the metadata of this Query.  # noqa: E501
+
+
+        :return: The metadata of this Query.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._metadata
+
+    @metadata.setter
+    def metadata(self, metadata):
+        """Sets the metadata of this Query.
+
+
+        :param metadata: The metadata of this Query.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._metadata = metadata
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -47,7 +47,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "http://orion.lab.fiware.org:1026"
+        self.host = "http://orion.lab.fiware.org:1026/v2"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 

@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -27,6 +27,12 @@ class TestBatchOperationsApi(unittest.TestCase):
         self.api = swagger_client.api.batch_operations_api.BatchOperationsApi()  # noqa: E501
 
     def tearDown(self):
+        pass
+
+    def test_notify(self):
+        """Test case for notify
+
+        """
         pass
 
     def test_query(self):

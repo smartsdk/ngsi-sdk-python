@@ -1,6 +1,6 @@
 # swagger_client.AttributeValueApi
 
-All URIs are relative to *http://orion.lab.fiware.org:1026*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

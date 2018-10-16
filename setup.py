@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -27,14 +27,14 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="ngsi-v2-2016.10",
+    description="ngsi-v2",
     author_email="",
     url="",
-    keywords=["Swagger", "ngsi-v2-2016.10"],
+    keywords=["Swagger", "ngsi-v2"],
     install_requires=REQUIRES,
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
     """
 )

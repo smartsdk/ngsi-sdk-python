@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -36,7 +36,7 @@ class EntitiesApi(object):
     def create_entity(self, body, **kwargs):  # noqa: E501
         """create_entity  # noqa: E501
 
-        The payload is an object representing the entity to be created. The object follows the JSON entity Representation format (described in a \"JSON Entity Representation\" section). Response: * Successful operation uses 201 Created. Reponse includes a `Location` header with the URL of the   created entity. * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.  # noqa: E501
+        The payload is an object representing the entity to be created. The object follows the JSON entity Representation format (described in a \"JSON Entity Representation\" section). Response: * Successful operation uses 201 Created or 204 No Content (if upsert option is used). Response includes a `Location` header with the URL of the   created entity. * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
         >>> thread = api.create_entity(body, async=True)
@@ -59,7 +59,7 @@ class EntitiesApi(object):
     def create_entity_with_http_info(self, body, **kwargs):  # noqa: E501
         """create_entity  # noqa: E501
 
-        The payload is an object representing the entity to be created. The object follows the JSON entity Representation format (described in a \"JSON Entity Representation\" section). Response: * Successful operation uses 201 Created. Reponse includes a `Location` header with the URL of the   created entity. * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.  # noqa: E501
+        The payload is an object representing the entity to be created. The object follows the JSON entity Representation format (described in a \"JSON Entity Representation\" section). Response: * Successful operation uses 201 Created or 204 No Content (if upsert option is used). Response includes a `Location` header with the URL of the   created entity. * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
         >>> thread = api.create_entity_with_http_info(body, async=True)
@@ -154,10 +154,11 @@ class EntitiesApi(object):
         :param str mq: A query expression for attribute metadata, composed of a list of statements separated by `;`, i.e., mq=statement1;statement2;statement3. See [Simple Query Language specification](#simple_query_language).
         :param str georel: Spatial relationship between matching entities and a reference shape. See [Geographical Queries](#geographical_queries).
         :param str geometry: Geografical area to which the query is restricted. See [Geographical Queries](#geographical_queries).
-        :param str coords: List of latitude-longitude pairs of coordinates separated by ';'. See [Geographical Queries](#geographical_queries).
+        :param str coords: List of latitude-longitude pairs of coordinates separated by `;`. See [Geographical Queries](#geographical_queries).
         :param float limit: Limits the number of entities to be retrieved
         :param float offset: Establishes the offset from where entities are retrieved
         :param str attrs: Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order.
+        :param str metadata: A list of metadata names to include in the response.
         :param str order_by: Criteria for ordering results. See \"Ordering Results\" section for details.
         :param str options: Options dictionary
         :return: list[Entity]
@@ -189,10 +190,11 @@ class EntitiesApi(object):
         :param str mq: A query expression for attribute metadata, composed of a list of statements separated by `;`, i.e., mq=statement1;statement2;statement3. See [Simple Query Language specification](#simple_query_language).
         :param str georel: Spatial relationship between matching entities and a reference shape. See [Geographical Queries](#geographical_queries).
         :param str geometry: Geografical area to which the query is restricted. See [Geographical Queries](#geographical_queries).
-        :param str coords: List of latitude-longitude pairs of coordinates separated by ';'. See [Geographical Queries](#geographical_queries).
+        :param str coords: List of latitude-longitude pairs of coordinates separated by `;`. See [Geographical Queries](#geographical_queries).
         :param float limit: Limits the number of entities to be retrieved
         :param float offset: Establishes the offset from where entities are retrieved
         :param str attrs: Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order.
+        :param str metadata: A list of metadata names to include in the response.
         :param str order_by: Criteria for ordering results. See \"Ordering Results\" section for details.
         :param str options: Options dictionary
         :return: list[Entity]
@@ -200,7 +202,7 @@ class EntitiesApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'type', 'id_pattern', 'type_pattern', 'q', 'mq', 'georel', 'geometry', 'coords', 'limit', 'offset', 'attrs', 'order_by', 'options']  # noqa: E501
+        all_params = ['id', 'type', 'id_pattern', 'type_pattern', 'q', 'mq', 'georel', 'geometry', 'coords', 'limit', 'offset', 'attrs', 'metadata', 'order_by', 'options']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -245,6 +247,8 @@ class EntitiesApi(object):
             query_params.append(('offset', params['offset']))  # noqa: E501
         if 'attrs' in params:
             query_params.append(('attrs', params['attrs']))  # noqa: E501
+        if 'metadata' in params:
+            query_params.append(('metadata', params['metadata']))  # noqa: E501
         if 'order_by' in params:
             query_params.append(('orderBy', params['order_by']))  # noqa: E501
         if 'options' in params:
@@ -506,6 +510,7 @@ class EntitiesApi(object):
         :param str entity_id: Id of the entity to be retrieved (required)
         :param str type: Entity type, to avoid ambiguity in case there are several entities with the same entity id.
         :param str attrs: Comma-separated list of attribute names whose data must be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
+        :param str metadata: A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
         :param str options: Options dictionary
         :return: Entity
                  If the method is called asynchronously,
@@ -531,13 +536,14 @@ class EntitiesApi(object):
         :param str entity_id: Id of the entity to be retrieved (required)
         :param str type: Entity type, to avoid ambiguity in case there are several entities with the same entity id.
         :param str attrs: Comma-separated list of attribute names whose data must be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
+        :param str metadata: A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
         :param str options: Options dictionary
         :return: Entity
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['entity_id', 'type', 'attrs', 'options']  # noqa: E501
+        all_params = ['entity_id', 'type', 'attrs', 'metadata', 'options']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -568,6 +574,8 @@ class EntitiesApi(object):
             query_params.append(('type', params['type']))  # noqa: E501
         if 'attrs' in params:
             query_params.append(('attrs', params['attrs']))  # noqa: E501
+        if 'metadata' in params:
+            query_params.append(('metadata', params['metadata']))  # noqa: E501
         if 'options' in params:
             query_params.append(('options', params['options']))  # noqa: E501
 
@@ -613,6 +621,7 @@ class EntitiesApi(object):
         :param str entity_id: Id of the entity to be retrieved (required)
         :param str type: Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
         :param str attrs: Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
+        :param str metadata: A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
         :param str options: Options dictionary
         :return: Attribute
                  If the method is called asynchronously,
@@ -638,13 +647,14 @@ class EntitiesApi(object):
         :param str entity_id: Id of the entity to be retrieved (required)
         :param str type: Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
         :param str attrs: Comma-separated list of attribute names whose data are to be included in the response. The attributes are retrieved in the order specified by this parameter. If this parameter is not included, the attributes are retrieved in arbitrary order, and all the attributes of the entity are included in the response.
+        :param str metadata: A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
         :param str options: Options dictionary
         :return: Attribute
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['entity_id', 'type', 'attrs', 'options']  # noqa: E501
+        all_params = ['entity_id', 'type', 'attrs', 'metadata', 'options']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -675,6 +685,8 @@ class EntitiesApi(object):
             query_params.append(('type', params['type']))  # noqa: E501
         if 'attrs' in params:
             query_params.append(('attrs', params['attrs']))  # noqa: E501
+        if 'metadata' in params:
+            query_params.append(('metadata', params['metadata']))  # noqa: E501
         if 'options' in params:
             query_params.append(('options', params['options']))  # noqa: E501
 
@@ -825,7 +837,7 @@ class EntitiesApi(object):
     def update_or_append_entity_attributes(self, entity_id, body, **kwargs):  # noqa: E501
         """update_or_append_entity_attributes  # noqa: E501
 
-        The request payload is an object representing the attributes to append or update. The object follows the JSON entity Representation format (described in \"JSON Entity Representation\" section), except that `id` and `type` are not allowed. The entity attributes are updated with the ones in the payload, depending on whether the `append` operation option is used or not. * If `append` is not used: the entity attributes are updated (if they previously exist) or appended   (if they don't previously exist) with the ones in the payload. * If `append` is used (i.e. strict append semantics): all the attributes in the payload not   previously existing in the entity are appended. In addition to that, in case some of the   attributes in the payload already exist in the entity, an error is returned. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.  # noqa: E501
+        The request payload is an object representing the attributes to append or update. The object follows the JSON entity Representation format (described in \"JSON Entity Representation\" section), except that `id` and `type` are not allowed. The entity attributes are updated with the ones in the payload, depending on whether the `append` operation option is used or not. * If `append` is not used: the entity attributes are updated (if they previously exist) or appended   (if they don't previously exist) with the ones in the payload. * If `append` is used (i.e. strict append semantics): all the attributes in the payload not   previously existing in the entity are appended. In addition to that, in case some of the   attributes in the payload already exist in the entity, an error is returned.    Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
         >>> thread = api.update_or_append_entity_attributes(entity_id, body, async=True)
@@ -850,7 +862,7 @@ class EntitiesApi(object):
     def update_or_append_entity_attributes_with_http_info(self, entity_id, body, **kwargs):  # noqa: E501
         """update_or_append_entity_attributes  # noqa: E501
 
-        The request payload is an object representing the attributes to append or update. The object follows the JSON entity Representation format (described in \"JSON Entity Representation\" section), except that `id` and `type` are not allowed. The entity attributes are updated with the ones in the payload, depending on whether the `append` operation option is used or not. * If `append` is not used: the entity attributes are updated (if they previously exist) or appended   (if they don't previously exist) with the ones in the payload. * If `append` is used (i.e. strict append semantics): all the attributes in the payload not   previously existing in the entity are appended. In addition to that, in case some of the   attributes in the payload already exist in the entity, an error is returned. Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.  # noqa: E501
+        The request payload is an object representing the attributes to append or update. The object follows the JSON entity Representation format (described in \"JSON Entity Representation\" section), except that `id` and `type` are not allowed. The entity attributes are updated with the ones in the payload, depending on whether the `append` operation option is used or not. * If `append` is not used: the entity attributes are updated (if they previously exist) or appended   (if they don't previously exist) with the ones in the payload. * If `append` is used (i.e. strict append semantics): all the attributes in the payload not   previously existing in the entity are appended. In addition to that, in case some of the   attributes in the payload already exist in the entity, an error is returned.    Response: * Successful operation uses 204 No Content * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
         >>> thread = api.update_or_append_entity_attributes_with_http_info(entity_id, body, async=True)

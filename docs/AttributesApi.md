@@ -1,6 +1,6 @@
 # swagger_client.AttributesApi
 
-All URIs are relative to *http://orion.lab.fiware.org:1026*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_attribute_data**
-> Entity get_attribute_data(entity_id, attr_name, type=type)
+> Entity get_attribute_data(entity_id, attr_name, type=type, metadata=metadata)
 
 
 
@@ -35,9 +35,10 @@ api_instance = swagger_client.AttributesApi(swagger_client.ApiClient(configurati
 entity_id = 'entity_id_example' # str | Id of the entity
 attr_name = 'attr_name_example' # str | Name of the attribute to be retrieved.
 type = 'type_example' # str | Entity type, to avoid ambiguity in the case there are several entities with the same entity id. (optional)
+metadata = 'metadata_example' # str | A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail. (optional)
 
 try:
-    api_response = api_instance.get_attribute_data(entity_id, attr_name, type=type)
+    api_response = api_instance.get_attribute_data(entity_id, attr_name, type=type, metadata=metadata)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AttributesApi->get_attribute_data: %s\n" % e)
@@ -50,6 +51,7 @@ Name | Type | Description  | Notes
  **entity_id** | **str**| Id of the entity | 
  **attr_name** | **str**| Name of the attribute to be retrieved. | 
  **type** | **str**| Entity type, to avoid ambiguity in the case there are several entities with the same entity id. | [optional] 
+ **metadata** | **str**| A list of metadata names to include in the response. See \&quot;Filtering out attributes and metadata\&quot; section for more detail. | [optional] 
 
 ### Return type
 

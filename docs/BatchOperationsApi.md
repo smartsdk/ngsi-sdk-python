@@ -1,12 +1,67 @@
 # swagger_client.BatchOperationsApi
 
-All URIs are relative to *http://orion.lab.fiware.org:1026*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**notify**](BatchOperationsApi.md#notify) | **POST** /op/notify | 
 [**query**](BatchOperationsApi.md#query) | **POST** /op/query | 
 [**update**](BatchOperationsApi.md#update) | **POST** /op/update | 
 
+
+# **notify**
+> notify(body, options=options)
+
+
+
+This operation is intended to consume a notification payload so that all the entity data included by such notification is persisted, overwriting if necessary. This operation is useful when one NGSIv2 endpoint is subscribed to another NGSIv2 endpoint (federation scenarios). The request payload must be an NGSIv2 notification payload. The behaviour must be exactly the same as POST /v2/op/update with actionType equal to append. Response code: * Successful operation uses 200 OK * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for more details.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.BatchOperationsApi(swagger_client.ApiClient(configuration))
+body = swagger_client.Subscription() # Subscription | 
+options = 'options_example' # str | Options dictionary (optional)
+
+try:
+    api_instance.notify(body, options=options)
+except ApiException as e:
+    print("Exception when calling BatchOperationsApi->notify: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Subscription**](Subscription.md)|  | 
+ **options** | **str**| Options dictionary | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **query**
 > list[object] query(body, limit=limit, offset=offset, order_by=order_by, options=options)
@@ -74,7 +129,7 @@ Name | Type | Description  | Notes
 
 
 
-This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + `actionType`, to specify the kind of update action to do: either APPEND, APPEND_STRICT, UPDATE,   DELETE. + `entities`, an array of entities, each one specified using the JSON entity Representation format   (described in the section \"JSON Entity Representation\"). Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.
+This operation allows to create, update and/or delete several entities in a single batch operation. The payload is an object with two properties: + `actionType`, to specify the kind of update action to do: either `append`, `appendStrict`, `update`,   `delete`. + `entities`, an array of entities, each one specified using the JSON entity Representation format   (described in the section \"JSON Entity Representation\").    Response: * Successful operation uses 204 No Content. * Errors use a non-2xx and (optionally) an error payload. See subsection on \"Error Responses\" for   more details.
 
 ### Example
 ```python

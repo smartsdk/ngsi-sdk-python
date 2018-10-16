@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -46,6 +46,7 @@ class AttributesApi(object):
         :param str entity_id: Id of the entity (required)
         :param str attr_name: Name of the attribute to be retrieved. (required)
         :param str type: Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
+        :param str metadata: A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
         :return: Entity
                  If the method is called asynchronously,
                  returns the request thread.
@@ -70,12 +71,13 @@ class AttributesApi(object):
         :param str entity_id: Id of the entity (required)
         :param str attr_name: Name of the attribute to be retrieved. (required)
         :param str type: Entity type, to avoid ambiguity in the case there are several entities with the same entity id.
+        :param str metadata: A list of metadata names to include in the response. See \"Filtering out attributes and metadata\" section for more detail.
         :return: Entity
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['entity_id', 'attr_name', 'type']  # noqa: E501
+        all_params = ['entity_id', 'attr_name', 'type', 'metadata']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -110,6 +112,8 @@ class AttributesApi(object):
         query_params = []
         if 'type' in params:
             query_params.append(('type', params['type']))  # noqa: E501
+        if 'metadata' in params:
+            query_params.append(('metadata', params['metadata']))  # noqa: E501
 
         header_params = {}
 

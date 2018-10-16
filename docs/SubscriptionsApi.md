@@ -1,6 +1,6 @@
 # swagger_client.SubscriptionsApi
 
-All URIs are relative to *http://orion.lab.fiware.org:1026*
+All URIs are relative to *http://orion.lab.fiware.org:1026/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_subscription**
-> update_subscription(subscription_id, body)
+> UpdateSubscriptionResponse update_subscription(subscription_id, body)
 
 
 
@@ -252,7 +252,8 @@ subscription_id = 'subscription_id_example' # str | subscription Id.
 body = swagger_client.Subscription() # Subscription | 
 
 try:
-    api_instance.update_subscription(subscription_id, body)
+    api_response = api_instance.update_subscription(subscription_id, body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubscriptionsApi->update_subscription: %s\n" % e)
 ```
@@ -266,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**UpdateSubscriptionResponse**](UpdateSubscriptionResponse.md)
 
 ### Authorization
 

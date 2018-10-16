@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -433,7 +433,7 @@ class SubscriptionsApi(object):
         :param async bool
         :param str subscription_id: subscription Id. (required)
         :param Subscription body: (required)
-        :return: None
+        :return: UpdateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -456,7 +456,7 @@ class SubscriptionsApi(object):
         :param async bool
         :param str subscription_id: subscription Id. (required)
         :param Subscription body: (required)
-        :return: None
+        :return: UpdateSubscriptionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -520,7 +520,7 @@ class SubscriptionsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='UpdateSubscriptionResponse',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),

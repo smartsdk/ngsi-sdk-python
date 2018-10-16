@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -72,7 +72,7 @@ class BatchOperation(object):
         """
         if action_type is None:
             raise ValueError("Invalid value for `action_type`, must not be `None`")  # noqa: E501
-        allowed_values = ["APPEND", "APPEND_STRICT", "UPDATE", "DELETE"]  # noqa: E501
+        allowed_values = ["append", "appendStrict", "update", "delete"]  # noqa: E501
         if action_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `action_type` ({0}), must be one of {1}"  # noqa: E501

@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** |  | [optional] 
+**id** | **str** |  | 
 **description** | **str** |  | [optional] 
-**subject** | **object** |  | [optional] 
-**notification** | **object** |  | [optional] 
+**subject** | [**SubscriptionSubject**](SubscriptionSubject.md) |  | 
+**notification** | [**SubscriptionNotification**](SubscriptionNotification.md) |  | 
 **expires** | **datetime** |  | [optional] 
 **status** | **str** |  | [optional] 
 **throttling** | **int** |  | [optional] 

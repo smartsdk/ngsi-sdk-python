@@ -1,9 +1,9 @@
 # coding: utf-8
 
 """
-    ngsi-v2-2016.10
+    ngsi-v2
 
-    NGSI V2 API  # noqa: E501
+    NGSI V2 API RC-2018.04  # noqa: E501
 
     OpenAPI spec version: v2
     
@@ -15,6 +15,9 @@ import pprint
 import re  # noqa: F401
 
 import six
+
+from swagger_client.models.subscription_notification import SubscriptionNotification  # noqa: F401,E501
+from swagger_client.models.subscription_subject import SubscriptionSubject  # noqa: F401,E501
 
 
 class Subscription(object):
@@ -33,8 +36,8 @@ class Subscription(object):
     swagger_types = {
         'id': 'str',
         'description': 'str',
-        'subject': 'object',
-        'notification': 'object',
+        'subject': 'SubscriptionSubject',
+        'notification': 'SubscriptionNotification',
         'expires': 'datetime',
         'status': 'str',
         'throttling': 'int'
@@ -62,14 +65,11 @@ class Subscription(object):
         self._throttling = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
+        self.id = id
         if description is not None:
             self.description = description
-        if subject is not None:
-            self.subject = subject
-        if notification is not None:
-            self.notification = notification
+        self.subject = subject
+        self.notification = notification
         if expires is not None:
             self.expires = expires
         if status is not None:
@@ -95,6 +95,8 @@ class Subscription(object):
         :param id: The id of this Subscription.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -125,7 +127,7 @@ class Subscription(object):
 
 
         :return: The subject of this Subscription.  # noqa: E501
-        :rtype: object
+        :rtype: SubscriptionSubject
         """
         return self._subject
 
@@ -135,8 +137,10 @@ class Subscription(object):
 
 
         :param subject: The subject of this Subscription.  # noqa: E501
-        :type: object
+        :type: SubscriptionSubject
         """
+        if subject is None:
+            raise ValueError("Invalid value for `subject`, must not be `None`")  # noqa: E501
 
         self._subject = subject
 
@@ -146,7 +150,7 @@ class Subscription(object):
 
 
         :return: The notification of this Subscription.  # noqa: E501
-        :rtype: object
+        :rtype: SubscriptionNotification
         """
         return self._notification
 
@@ -156,8 +160,10 @@ class Subscription(object):
 
 
         :param notification: The notification of this Subscription.  # noqa: E501
-        :type: object
+        :type: SubscriptionNotification
         """
+        if notification is None:
+            raise ValueError("Invalid value for `notification`, must not be `None`")  # noqa: E501
 
         self._notification = notification
 
@@ -200,6 +206,12 @@ class Subscription(object):
         :param status: The status of this Subscription.  # noqa: E501
         :type: str
         """
+        allowed_values = ["active", "inactive"]  # noqa: E501
+        if status not in allowed_values:
+            raise ValueError(
+                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
+                .format(status, allowed_values)
+            )
 
         self._status = status
 
