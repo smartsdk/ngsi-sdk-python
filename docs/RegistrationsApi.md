@@ -26,7 +26,7 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
+# Configure API key authorization: fiware_token
 configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -54,7 +54,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
@@ -78,7 +78,7 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
+# Configure API key authorization: fiware_token
 configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -106,7 +106,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
@@ -130,7 +130,7 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
+# Configure API key authorization: fiware_token
 configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
@@ -183,7 +183,7 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
+# Configure API key authorization: fiware_token
 configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 
@@ -240,7 +240,7 @@ import swagger_client
 from swagger_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
+# Configure API key authorization: fiware_token
 configuration = swagger_client.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -270,7 +270,7 @@ void (empty response body)
 
 ### Authorization
 
-[Bearer](../README.md#Bearer)
+[fiware_token](../README.md#fiware_token)
 
 ### HTTP request headers
 

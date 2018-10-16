@@ -114,7 +114,7 @@ class SubscriptionsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/subscriptions', 'POST',
@@ -209,7 +209,7 @@ class SubscriptionsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/subscriptions/{subscriptionId}', 'DELETE',
@@ -304,7 +304,7 @@ class SubscriptionsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/subscriptions/{subscriptionId}', 'GET',
@@ -403,7 +403,7 @@ class SubscriptionsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/subscriptions', 'GET',
@@ -510,7 +510,7 @@ class SubscriptionsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/subscriptions/{subscriptionId}', 'PATCH',

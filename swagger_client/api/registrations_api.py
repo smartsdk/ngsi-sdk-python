@@ -114,7 +114,7 @@ class RegistrationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/registrations', 'POST',
@@ -209,7 +209,7 @@ class RegistrationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/registrations/{registrationId}', 'DELETE',
@@ -304,7 +304,7 @@ class RegistrationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/registrations/{registrationId}', 'GET',
@@ -403,7 +403,7 @@ class RegistrationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/registrations', 'GET',
@@ -510,7 +510,7 @@ class RegistrationsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/registrations/{registrationId}', 'PATCH',

@@ -110,7 +110,7 @@ class TypesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/types/{entityType}', 'GET',
@@ -209,7 +209,7 @@ class TypesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/types/', 'GET',

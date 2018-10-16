@@ -118,7 +118,7 @@ class EntitiesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities', 'POST',
@@ -265,7 +265,7 @@ class EntitiesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities', 'GET',
@@ -364,7 +364,7 @@ class EntitiesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities/{entityId}', 'DELETE',
@@ -479,7 +479,7 @@ class EntitiesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities/{entityId}/attrs', 'PUT',
@@ -590,7 +590,7 @@ class EntitiesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities/{entityId}', 'GET',
@@ -701,7 +701,7 @@ class EntitiesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities/{entityId}/attrs', 'GET',
@@ -816,7 +816,7 @@ class EntitiesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities/{entityId}/attrs', 'PATCH',
@@ -931,7 +931,7 @@ class EntitiesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities/{entityId}/attrs', 'POST',

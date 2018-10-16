@@ -122,7 +122,7 @@ class AttributeValueApi(object):
             ['application/json', 'plain/text'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities/{entityId}/attrs/{attrName}/value', 'GET',
@@ -241,7 +241,7 @@ class AttributeValueApi(object):
             ['application/json', 'plain/text'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
+        auth_settings = ['fiware_token']  # noqa: E501
 
         return self.api_client.call_api(
             '/entities/{entityId}/attrs/{attrName}/value', 'PUT',
