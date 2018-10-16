@@ -105,6 +105,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [APIEntryPoint](docs/APIEntryPoint.md)
  - [Attribute](docs/Attribute.md)
  - [AttributeValue](docs/AttributeValue.md)
  - [BatchOperation](docs/BatchOperation.md)

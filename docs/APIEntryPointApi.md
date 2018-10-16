@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **retrieve_api_resources**
-> ERRORUNKNOWN retrieve_api_resources()
+> APIEntryPoint retrieve_api_resources()
 
 
 
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ERRORUNKNOWN**](ERRORUNKNOWN.md)
+[**APIEntryPoint**](APIEntryPoint.md)
 
 ### Authorization
 

@@ -15,6 +15,7 @@
 from __future__ import absolute_import
 
 # import models into model package
+from swagger_client.models.api_entry_point import APIEntryPoint
 from swagger_client.models.attribute import Attribute
 from swagger_client.models.attribute_value import AttributeValue
 from swagger_client.models.batch_operation import BatchOperation
